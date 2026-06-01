@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>starting profesional</title>
+    <style>
+      body {
+        font-family: 'Courier New', monospace;
+        background: linear-gradient(darkblue, purple);
+      }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+      }
+      .logo {
+        margin: 10px;
+        margin-bottom: 10px;
+        background: black;
+        border-radius: 12px;
+        padding: 1px;
+        color: cyan;
+        text-shadow: 0 0 10px;
+      }
+      .ham {
+        display: block;
+        cursor: pointer;
+        color: cyan;
+        font-size: 30px;
+      }
+      .navbar ul {
+        display: none;
+        list-style: none;
+        color: cyan;
+        text-shadow: 0 0 10px;
+        gap: 20px;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: 160px 1fr;
+      }
+      .sidebar {
+        background: linear-gradient(darkgray, gray);
+        color: cyan;
+        text-shadow: 0 0 10px;
+        min-height: 100vh;
+        text-align: center;
+        border-radius: 12px;
+      }
+      .lg {
+        margin-top: 20px;
+        background: black;
+        padding: 3px;
+        border-radius: 12px;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .lg:hover {
+        transform: translateX(10px);
+        transition: 0.3s;
+      }
+      .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+        margin-top: 40px;
+      }
+      .sidebar li {
+        background: darkcyan;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+      .sidebar li:hover {
+        transform: translateX(10px);
+        transition: 0.3s;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        color: cyan;
+        text-shadow: 0 0 10px;
+      }
+      .hamshowed {
+        display: block !important;
+      }
+      .blck {
+        background: black;
+      }
+      @media(min-width: 768px) {
+        .wrapper {
+          grid-template-columns: 250px 1fr;
+        }
+        .navbar ul {
+          display: flex;
+        }
+        .ham {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body id="badann">
+    <div class="navbar">
+      <div class="logo">KHAIRHUB 1.5</div>
+      <div class="ham" id="hamham">=</div>
+      <ul id="pp">
+        <li>PENTEST AI</li>
+        <li>PYTHON AI</li>
+        <li>Premium</li>
+      </ul>
+    </div>
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="lg" id="elolo">Dark mode</div>
+        <ul> 
+          <li>Offensive</li>
+          <li>Defensive</li>
+          <li>Cyber Scientist</li>
+        </ul>
+      </div>
+      <div class="container"> 
+        <div class="card">
+          <h2>Welcome to KHAIRHUB</h2>
+          <p>Show your hacking talent here</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const jj = document.querySelector("#badann");
+      const aa = document.querySelector("#hamham");
+      const ee = document.querySelector("#elolo");
+      const ul = document.querySelector("#pp");
+
+      ee.addEventListener('click', function() {
+        jj.classList.toggle("blck");
+      })
+
+      aa.addEventListener('click', function() {
+        ul.classList.toggle("hamshowed");
+      })
+    </script>
+  </body>
+</html>
